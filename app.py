@@ -4,6 +4,10 @@ from zoneinfo import ZoneInfo  # Python 3.9+
 
 app = Flask(__name__)
 
+@app.route('/', methods=['POST','GET'])
+def index():
+    return "Date Time live"
+
 @app.route('/datetime', methods=['GET'])
 def get_datetime():
     # Get local date and time (no timezone)
